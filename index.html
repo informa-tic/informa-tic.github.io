@@ -9,30 +9,63 @@
             background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('./img/workspace.jpg');
             background-size: cover
             }
-            div {
-                position: absolute;
-                top: 45%;
+            .code {
+                bottom: 55%;
                 left: 50%;
-                transform:translate(-50%, -50%);
+                text-align: center;
                 font-size:40px;
                 color: #fff
 
             }
+            .contact {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 2fr;
+                margin: auto;
+                width: 60%;
+                bottom: 30%;
+            }
+
+            .center-gird-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .contact .icon {
+                width: 4rem;
+                height: 4rem;
+            }
             span {
                 color: red;
+            }
+            .container {
+                display: grid;
+                grid-template-rows: 3fr 1fr;
+                margin-top: 18%
             }
         </style>
     </head>
     <body>
-        <div class="code">
-            <h1> I am a <span class="type"></span></h1>
-
+        <div class="container">
+        <div class="code" style="grid-row-start: 1">
+            <h1> I am <span class="type"></span></h1>
         </div>
-
+        <div class="contact" style="grid-row-start: 2">
+            <div class="center-gird-content" style="grid-column-start: 2;">
+                <a href="https://www.linkedin.com/in/lauratortosaaparicio/">
+                    <img class="icon" src="img/icon-linkedin.png" alt="laura linkedin" ></img>
+                </a>
+            </div>
+          <div class="center-gird-content">
+            <a href="https://github.com/informa-tic">
+                <img class="icon" src="img/icon-github.png" alt="laura github" ></img>
+            </a>
+          </div>
+        </div>
+    </div>
         <script src="typed.min.js"></script>
         <script>
             var typed = new Typed('.type', {
-                strings: ['Developer', 'Dreamer'],
+                strings: ['Backend Developer', 'AWS enthusiastic', ],
                 typeSpeed: 60,
                 backSpeed: 60,
                 loop: true
